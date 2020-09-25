@@ -1,5 +1,5 @@
 import React from 'react';
-import Dictaphone from './components/Dictaphone';
+import Dictaphone from './components/main/Dictaphone';
 
 
 

@@ -2,6 +2,8 @@ import React, {useEffect, useState} from 'react'
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition'
 
 const Dictaphone = () => {
+    var stopTime;
+    var startTime;
     const [message, setMessage] = useState('');
     const commands = [
         {
@@ -18,10 +20,12 @@ const Dictaphone = () => {
 
     function stopRecording() {
         SpeechRecognition.stopListening();
+        stopTime = new Date();
+        console.log(stopTime, startTime);
     }
     function startRecording() {
-        
-        console.log("does it work???");
+        startTime = new Date();
+        console.log("Start recording");
         SpeechRecognition.startListening({continuous: true});
     }
 

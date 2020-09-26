@@ -6,14 +6,15 @@ export class LiveTranscript extends Component {
     render() {
         return (
             <div className="live_transcript_box">
-                <header className="live_transcript_header">
-                    Live Transcript
-                </header>
+                <h5 className="live_transcript_header">
+                    LIVE TRANSCRIPT
+                </h5>
                 <div className="transcript">
                 <Highlighter
                     searchWords={FillerWords}
                     autoEscape={true}
                     textToHighlight={this.props.transcript}
+                    highlightStyle={{backgroundColor: "white"}}
                 />
                 </div>
             </div>

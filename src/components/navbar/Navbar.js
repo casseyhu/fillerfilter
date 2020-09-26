@@ -36,10 +36,15 @@ const Navbar = () => {
                 </div>
             </div>
             <nav className="navbar fixed-bottom ">
-                <button className="button" id="stopButton" onClick={stopRecording}>Stop</button>
-                <button className="button" id="startButton" onClick={startRecording}>Start</button>
-                {/* <button className="button" id="newButton" onClick={function myfunc() { console.log(transcript) }}>NEW</button> */}
-                <button className="button" id="resetButton" onClick={resetTranscript}>Reset</button>
+                <button className="button" id="stopButton" onClick={stopRecording} title="Stop Recording">
+                    <img src="https://www.flaticon.com/svg/static/icons/svg/709/709714.svg" width="40px" height="40px"/>
+                </button>
+                <button className="button" id="startButton" onClick={startRecording} title="Start Recording">
+                    <img src="https://www.flaticon.com/svg/static/icons/svg/907/907856.svg" width="40px" height="40px"/>
+                </button>
+                <button className="button" id="resetButton" onClick={resetTranscript} title="Restart Recording">
+                    <img src="https://www.flaticon.com/svg/static/icons/svg/2/2046.svg" width="40px" height="40px"/>
+                </button>
             </nav>
         </div>
     )

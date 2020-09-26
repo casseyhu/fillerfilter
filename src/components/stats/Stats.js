@@ -41,6 +41,7 @@ class Stats extends Component {
             <div>
                 <div className="chart">
                     <p>Time Elapsed: {this.props.timeElapsed} seconds</p>
+                    <p>{this.props.timeElapsed ? 60*transcript.length/this.props.timeElapsed : 0} words per minute</p>
                     <b>Top 10 Common Words in Transcript</b>
                     <Chart chartType= "Table" style={{paddingRight: '2%', paddingBottom: '2%'}} data={top_words}
                     options={{

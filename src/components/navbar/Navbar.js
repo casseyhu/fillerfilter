@@ -28,6 +28,10 @@ const Navbar = () => {
         console.log("Start recording", startTime);
         SpeechRecognition.startListening({ continuous: true });
     }
+    function reset() {
+        setTimeElapsed(0);
+        resetTranscript();
+    }
     
     return (
         <div>
@@ -47,7 +51,7 @@ const Navbar = () => {
                 <button className="button" id="startButton" onClick={startRecording} title="Start Recording">
                     <img src="https://www.flaticon.com/svg/static/icons/svg/907/907856.svg" width="40px" height="40px"/>
                 </button>
-                <button className="button" id="resetButton" onClick={resetTranscript} title="Restart Recording">
+                <button className="button" id="resetButton" onClick={reset} title="Restart Recording">
                     <img src="https://www.flaticon.com/svg/static/icons/svg/2/2046.svg" width="40px" height="40px"/>
                 </button>
             </nav>

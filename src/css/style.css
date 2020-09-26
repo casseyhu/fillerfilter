@@ -19,24 +19,37 @@
 }
 
 .navbar {
-    background-color: #E0E4D6;
-    border-radius: 20px 20px 0px 0px;
-    min-height: 10%;
-    padding: 0px;
+  background-color: #FEFEFE;
+  border-radius: 20px 20px 0px 0px;
+  min-height: 10%;
+  padding: 0px;
 }
 
 .button {
-    background-color: #E0E4D6;
-    height: 60px;
-    width: 25%;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 30px;
-    border-color: #FFFFFF;
-    border: none;
-    text-align: center;
-    outline: none;
+  background-color: #FEFEFE;
+  height: 60px;
+  width: 25%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 30px;
+  border: none;
+  text-align: center;
+  outline: none;
 }
+
+.button:focus{
+outline: none;
+box-shadow: none;
+}
+
+.button:hover{
+background-color: #DFE1E7;
+}
+
+.button:active{
+background-color: #A0A6A3;
+}
+
 
 body {
   /* background-color: #B7B7CB; */

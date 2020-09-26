@@ -35,10 +35,10 @@ const Navbar = () => {
                 </div>
             </div>
             <nav className="navbar fixed-bottom ">
-                <button className="button" id="stopButton" onClick={stopRecording}>Stop</button>
-                <button className="button" id="startButton" onClick={startRecording}>Start</button>
-                <button className="button" id="newButton" onClick={function myfunc() { console.log(transcript) }}>NEW</button>
-                <button className="button" id="resetButton" onClick={resetTranscript}>Reset</button>
+                <button className="button" id="stopButton" onClick={stopRecording}><img src="https://www.flaticon.com/svg/static/icons/svg/709/709714.svg" width="40px" height="40px"/></button>
+                <button className="button" id="startButton" onClick={startRecording}><img src="https://www.flaticon.com/svg/static/icons/svg/907/907856.svg" width="40px" height="40px"/></button>
+                <button className="button" id="newButton" onClick={function myfunc() { console.log(transcript) }}><img src="https://www.flaticon.com/svg/static/icons/svg/3143/3143091.svg" width="45px" height="50px"/></button>
+                <button className="button" id="resetButton" onClick={resetTranscript}><img src="https://www.flaticon.com/svg/static/icons/svg/2/2046.svg" width="40px" height="40px"/></button>
             </nav>
         </div>
     )

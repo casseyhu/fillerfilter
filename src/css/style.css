@@ -1,6 +1,6 @@
 /* transcript css */
 .live_transcript_box {
-  text-align: center;
+  text-align: left;
   margin-left: 3%;
   background-color:inherit;
   overflow: hidden;
@@ -11,6 +11,7 @@
   color: #0D5498;
   font: 30pt bold 'Montserrat', sans-serif;
   background-color: white;
+  text-align: center;
   border-radius: 12px;
 }
 .transcript {
@@ -18,7 +19,7 @@
 }
 
 /* stats css */
-.barchart {
+.chart {
     margin-right: 2%;
 }
 

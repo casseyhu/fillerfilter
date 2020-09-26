@@ -28,10 +28,10 @@ const Navbar = () => {
     return (
         <div>
             <div class="row">
-                <div class="col s3">
+                <div class="col s3" style={{height: '500px'}}>
                     <LiveTranscript transcript={transcript} />
                 </div>
-                <div class="col s9">
+                <div class="col s9" style={{height: '500px'}}>
                     <Stats transcript={transcript} timeElapsed={timeElapsed} />
                 </div>
             </div>

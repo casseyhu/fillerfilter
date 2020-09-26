@@ -19,12 +19,23 @@ class Stats extends Component {
         }
         data.unshift(['Filler Words', "Frequency"]);
         return (
-            <div className="barchart">
-                <Chart chartType="BarChart" style={{paddingLeft: '0%'}} height="50%" data={data} 
-                options={{
-                    chart: {
-                    },
-                }}/>
+            <div>
+                <div className="barchart">
+                    <Chart chartType="PieChart" style={{paddingLeft: '0%'}} width="80%" height="100%" data={data} 
+                    options={{
+                        title: "Most Common Filler Words",
+                        backgroundColor: "#B7B7CB",
+                        chart: {
+                        },
+                    }}/>
+                    <Chart chartType="PieChart" style={{paddingLeft: '0%'}} width="80%" height="100%" data={data} 
+                    options={{
+                        title: "Most Common Filler Words",
+                        backgroundColor: "#B7B7CB",
+                        chart: {
+                        },
+                    }}/>
+                </div>
             </div>
         )
     }

@@ -2,3 +2,19 @@ body {
   background-color: var(--swatch-foundation);
   font-family: 'Lexend Exa';
 }
+.navbar {
+  background-color: #B7B7CB;
+  border-radius: 20px 20px 0px 0px;
+  min-height: 100px;
+  padding: 0px;
+}
+#startButton, #stopButton, #newButton, #resetButton, #muteButton{
+  background-color: #E0E4D6;
+  height: 60px;
+  width: 60px;
+  border-radius: 30px;
+  border-color: #FFFFFF;
+  border: none;
+  text-align: center;
+  outline: none;
+}

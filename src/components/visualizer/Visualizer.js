@@ -19,7 +19,7 @@ const Visualizer = () => {
         const analyser = context.createAnalyser();
         const source = context.createMediaStreamSource(stream);
         source.connect(analyser);
-        analyser.connect(context.destination);
+        // analyser.connect(context.destination);
         freqs = new Uint8Array(analyser.frequencyBinCount);
 
         function draw() {

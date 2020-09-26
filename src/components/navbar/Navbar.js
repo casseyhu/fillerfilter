@@ -23,8 +23,7 @@ const Navbar = () => {
             const stopTime = new Date();
             setPlaying(false);
             SpeechRecognition.stopListening();
-            if (transcript[0]!="" && timeElapsed + (stopTime - startTime) / 1000)
-
+            if (timeElapsed + (stopTime - startTime) / 1000)
                 setWpm(Math.round(60*transcript.split(' ').length/(timeElapsed + (stopTime - startTime) / 1000) * 10) / 10);
             else
                 setWpm(0);

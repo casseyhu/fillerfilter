@@ -1,7 +1,7 @@
 .live_transcript_box {
     text-align: center;
     margin-left: 3%;
-    background-color:  #E79A92;
+    background-color:#A5BECF;
     overflow: hidden;
 }
 
@@ -39,14 +39,20 @@
 }
 
 body {
-    background-color: #B7B7CB;
+  /* background-color: #B7B7CB; */
+  height: 100%;
+  width: 100%;
+  background:linear-gradient(#668BC4,transparent);
 }
 
 .entry {
-    display: -webkit-box;
-    display: flex;
-    width: 100vw;
-    height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  margin-left:auto;
+  margin-right:auto;
 }
 
 .centert {
@@ -185,29 +191,18 @@ body {
 }
 
 #enterbutton {
-    background-color: white;
-    border: none;
-    border-radius: 15px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 40px;
-    text-transform: uppercase;
-    text-align: center;
-    cursor: pointer;
-    padding: 10px;
-}
-
-#enterbutton {
-    padding: 0.3em 1.2em;
-    border-radius: 2em;
-    font: 15pt 'Montserrat', sans-serif;
-    color: white;
-    background-color: #E0E4D6;
-    text-align: center;
-    justify-content: center;
-    transition: all 0.2s;
-    cursor: pointer;
+  background-color: inherit;
+  /* border: none; */
+  color: white;
+  border-radius: 15px;
+  font: 30px 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+  padding: 10px;
+  margin-right: 60px;
 }
 
 #enterbutton:hover {
-    background-color: #E0E4D6;
+    background-color: white;
 }

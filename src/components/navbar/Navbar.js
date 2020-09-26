@@ -53,6 +53,12 @@ const Navbar = () => {
         setTimeElapsed(0);
         setWpm(0);
         resetTranscript();
+        let startButton = document.getElementById('startButton');
+        startButton.disabled = false;
+        startButton.style.backgroundColor = '#F7F3ED';
+        let stopButton = document.getElementById('stopButton');
+        stopButton.disabled = true;
+        stopButton.style.backgroundColor = '#A1A4A5';
     }
     
     return (

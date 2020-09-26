@@ -38,12 +38,24 @@ class Stats extends Component {
         top_words.unshift(['Word', 'Frequency']);
         data.unshift(['Filler Words', "Frequency"]);
         return (
-            <div>
+            <div style={{textAlign:"center"}}>
+                <h5 className="live_transcript_header">
+                    STATISTICS
+                </h5>
                 <div className="chart">
                     {/* <p>Time Elapsed: {this.props.timeElapsed} seconds</p> */}
-                    <p>{this.props.timeElapsed ? (Math.round(60*transcript.length/this.props.timeElapsed * 10) / 10) : 0} words per minute</p>
+                    <p style={{marginBottom:'3px', font:'10pt Montserrat, sans-serif', textAlign:'center'}}>{this.props.timeElapsed ? (Math.round(60*transcript.length/this.props.timeElapsed * 10) / 10) : 0} words per minute</p>
                     <b>Top 10 Common Words in Transcript</b>
-                    <Chart chartType= "Table" style={{paddingRight: '2%', paddingBottom: '2%', borderRadius: '10px'}} data={top_words}
+                    <Chart chartType="PieChart" style={{backgroundColor:'clear'}} data={data} 
+                    options={{
+                        // title: "Most Common Filler Words",
+                        width: '100%',
+                        height: "50%",
+                        chart: {
+                        },
+                    }}/>
+                    <b>Top 10 Common Words in Transcript</b>
+                    <Chart chartType= "Table" style={{ paddingBottom: '2%', backgroundColor:'clear'}} data={top_words}
                     options={{
                         height: '50%',
                         width: '100%',
@@ -51,14 +63,7 @@ class Stats extends Component {
                         chart: {
                         },
                     }}/>
-                    <Chart chartType="PieChart" style={{paddingRight: '2%'}} data={data} 
-                    options={{
-                        title: "Most Common Filler Words",
-                        width: '100%',
-                        height: "50%",
-                        chart: {
-                        },
-                    }}/>
+                    
                 </div>
             </div>
         )

@@ -42,8 +42,9 @@ const Navbar = () => {
                 <div style={{height: '500px', float:'left', width:'58%'}}>
                     <Stats transcript={transcript} timeElapsed={timeElapsed} />
                 </div>
-                <Visualizer playing={playing}/>
+                
             </div>
+            <Visualizer playing={playing}/>
             <nav className="navbar fixed-bottom ">
                 <button className="button" id="stopButton" onClick={stopRecording} title="Stop Recording">
                     <img src="https://www.flaticon.com/svg/static/icons/svg/709/709714.svg" width="40px" height="40px"/>

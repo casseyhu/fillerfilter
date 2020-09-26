@@ -24,6 +24,7 @@ const Navbar = () => {
         console.log("Start recording", startTime);
         SpeechRecognition.startListening({ continuous: true });
     }
+    
     return (
         <div>
             <div class="row">
@@ -32,12 +33,13 @@ const Navbar = () => {
                 </div>
                 <div class="col s9">
                     <Stats transcript={transcript} timeElapsed={timeElapsed} />
+                    <p>Time Elapsed: {timeElapsed} seconds</p>
                 </div>
             </div>
             <nav className="navbar fixed-bottom ">
                 <button className="button" id="stopButton" onClick={stopRecording}>Stop</button>
                 <button className="button" id="startButton" onClick={startRecording}>Start</button>
-                <button className="button" id="newButton" onClick={function myfunc() { console.log(transcript) }}>NEW</button>
+                {/* <button className="button" id="newButton" onClick={function myfunc() { console.log(transcript) }}>NEW</button> */}
                 <button className="button" id="resetButton" onClick={resetTranscript}>Reset</button>
             </nav>
         </div>

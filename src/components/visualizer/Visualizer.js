@@ -1,10 +1,14 @@
 
+import React, { useEffect, useState } from 'react';
+
 const Visualizer = (props) => {
-    if(props.playing){
-        console.log('playing');
+
+    const [occurred, setOccurred] = useState(false);
+    if(props.playing && !occurred){
+        setOccurred(true);
     const myCanvas = document.getElementById("myCanvas");
     const ctx = myCanvas.getContext("2d");
-
+        
     let freqs;
 
     navigator.mediaDevices.enumerateDevices().then((devices) => {
@@ -26,7 +30,7 @@ const Visualizer = (props) => {
         function draw() {
             // let radius = 75;
             let bars = 200;
-
+            console.log(occurred)
             // Draw Background. The color is specifically picked to blend with gradient. 
             ctx.clearRect(0,0,1920, 355);
             ctx.beginPath();
@@ -55,6 +59,9 @@ const Visualizer = (props) => {
     }); 
 }
 else {
+    // if(!props.playing && occurred){
+    //     setOccurred(false);
+    // }
     console.log('NOTT playing');
 }
     return(null);

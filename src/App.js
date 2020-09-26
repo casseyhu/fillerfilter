@@ -10,7 +10,7 @@ export class App extends Component {
             <div className="app">
                 <Navbar /> 
                 <SpeechToText/>
-                <Stats />
+                {/* <Stats /> */}
             </div>
         );
     }

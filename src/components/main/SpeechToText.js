@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition'
 import LiveTranscript from './LiveTranscript'
+import Stats from "../stats/Stats"
 
 const SpeechToText = () => {
     const [startTime, setStartTime] = useState();
@@ -38,6 +39,7 @@ const SpeechToText = () => {
             <button onClick={console.log(transcript)}>NEW</button>
             <button onClick={resetTranscript}>Reset</button>
             <LiveTranscript transcript={transcript}/>
+            <Stats transcript ={transcript}/>
         </div>
     )
 }

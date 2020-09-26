@@ -13,7 +13,7 @@ export class LiveTranscript extends Component {
                 <Highlighter
                     searchWords={FillerWords.RegExFiller}
                     textToHighlight={this.props.transcript}
-                    highlightStyle={{backgroundColor: "white"}}
+                    highlightStyle={{backgroundColor: "#A9E2E4"}}
                 />
                 </div>
             </div>

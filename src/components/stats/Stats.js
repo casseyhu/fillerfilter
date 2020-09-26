@@ -1,10 +1,13 @@
 import React, {Component} from 'react'
 import { Chart } from "react-google-charts";
+import FillerWords from './FillerWords'
+
 class Stats extends Component {
     render() {
-        var filler_dictionary = {"like": 0, "basically": 0, "so": 0, "wow": 0, "really": 0, "well": 0, "actually": 0, "seriously": 0,
-            "literally": 0, "okay": 0,
-        };
+        var filler_dictionary = {};
+        for (const key of FillerWords) {
+             filler_dictionary[key] = 0;
+        }
         const transcript = this.props.transcript.toLowerCase().split(" ");
         for(var i = 0; i < transcript.length; i++){
             console.log(filler_dictionary[transcript[i]])
@@ -21,6 +24,7 @@ class Stats extends Component {
         return (
             <div>
                 <div className="barchart">
+                    <p>Time Elapsed: {this.props.timeElapsed} seconds</p>
                     <Chart chartType="PieChart" style={{paddingLeft: '0%'}} width="80%" height="100%" data={data} 
                     options={{
                         title: "Most Common Filler Words",

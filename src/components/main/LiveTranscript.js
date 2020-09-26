@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import Highlighter from 'react-highlight-words'
+import FillerWords from '../stats/FillerWords'
 
 export class LiveTranscript extends Component {
     render() {
@@ -8,7 +10,11 @@ export class LiveTranscript extends Component {
                     Live Transcript
                 </header>
                 <div className="transcript">
-                    <p>{this.props.transcript}</p>
+                <Highlighter
+                    searchWords={FillerWords}
+                    autoEscape={true}
+                    textToHighlight={this.props.transcript}
+                />
                 </div>
             </div>
         )

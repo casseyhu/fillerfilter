@@ -33,7 +33,6 @@ const Navbar = () => {
                 </div>
                 <div class="col s9">
                     <Stats transcript={transcript} timeElapsed={timeElapsed} />
-                    <p>Time Elapsed: {timeElapsed} seconds</p>
                 </div>
             </div>
             <nav className="navbar fixed-bottom ">

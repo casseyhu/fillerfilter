@@ -7,9 +7,11 @@ class Main extends Component {
         document.body.style = 'background-color: #B7B7CB; maxWidth:100%; height: 100vh; overflow: hidden;';
         return (
             <div className="app">
-                <div style={{float: "left", paddingLeft: "200px", marginRight: "-400px"}}><img src={logo} alt="logo" width="100" height="100"/></div>
-                <h1 class="centert glitch is-glitching" data-text="fillerfilter">fillerfilter</h1>
-                <div style={{float: "right", marginTop:"-100px", paddingRight: "200px"}}><img src={logo} alt="logo" width="100" height="100"/></div>
+                <div className="row">
+                    <img src={logo} alt="logo" width="100" height="100" style={{margin: "auto 0 auto 15%"}}/>
+                    <h1 class="centert glitch is-glitching" data-text="fillerfilter" >fillerfilter</h1>
+                    <img src={logo} alt="logo" width="100" height="100" style={{margin: "auto 15% auto 0"}}/>
+                </div>
                 <Navbar/>
             </div>
         );

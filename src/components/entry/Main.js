@@ -1,5 +1,4 @@
-import React, {Component} from 'react'
-import Dictaphone from '../main/Dictaphone'
+import React, {Component, useState} from 'react'
 import Navbar from '../navbar/Navbar'
 
 class Main extends Component {
@@ -7,8 +6,7 @@ class Main extends Component {
         return (
             <div className="app">
                 <h1 class="centert glitch is-glitching" data-text="fillerfilter">fillerfilter</h1>
-                <Dictaphone />
-                <Navbar />
+                <Navbar/>
             </div>
         );
     }

@@ -5,7 +5,7 @@ export class LiveTranscript extends Component {
         return (
             <div className="live_transcript_box">
                 <header className="live_transcript_header">
-                    Live Transcript Messages
+                    Live Transcript
                 </header>
                 <div className="transcript">
                     <p>{this.props.transcript}</p>

@@ -19,7 +19,7 @@ class Stats extends Component {
         }
         data.unshift(['Filler Words', "Frequency"]);
         return (
-            <div>
+            <div className="barchart">
                 <Chart chartType="BarChart" style={{paddingLeft: '0%'}}width="90%" height="50%" data={data} 
                 options={{
                     chart: {

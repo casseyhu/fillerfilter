@@ -53,8 +53,9 @@
   background-color: #F7F3ED;
   height: 60px;
   width: 30%;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 1%;
+  /* margin-left: auto;
+  margin-right: auto; */
   border-radius: 30px;
   border: none;
   text-align: center;
@@ -78,7 +79,7 @@ body {
   max-width: 100%;
   background:linear-gradient(#7FC4F3,transparent);
   min-width: 1220px;
-  min-height: 800px;
+  min-height: 700px;
 }
 
 /* entry page and title css */
@@ -107,7 +108,7 @@ body {
     position: absolute;
     top: 0;
     width: 100%;
-    background: black;
+    background: linear-gradient(#7FC4F3,transparent);
     clip: rect(0, 0, 0, 0);
 }
 .glitch:before {

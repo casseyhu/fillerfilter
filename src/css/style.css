@@ -52,7 +52,7 @@
 .button {
   background-color: #F7F3ED;
   height: 60px;
-  width: 33%;
+  width: 30%;
   margin-left: auto;
   margin-right: auto;
   border-radius: 30px;
@@ -77,6 +77,8 @@ body {
   height: 100%;
   max-width: 100%;
   background:linear-gradient(#7FC4F3,transparent);
+  min-width: 1220px;
+  min-height: 800px;
 }
 
 /* entry page and title css */

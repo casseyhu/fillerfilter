@@ -27,11 +27,11 @@ const Navbar = () => {
     
     return (
         <div>
-            <div class="row">
-                <div class="col s3" style={{height: '500px'}}>
+            <div class="row" style={{display:'flex', justifyContent:'center', margin:'1% 3%'}}>
+                <div style={{height: '500px', float:'left', width:'38%', marginRight:'4%'}}>
                     <LiveTranscript transcript={transcript} />
                 </div>
-                <div class="col s9" style={{height: '500px'}}>
+                <div style={{height: '500px', float:'left', width:'58%'}}>
                     <Stats transcript={transcript} timeElapsed={timeElapsed} />
                 </div>
             </div>

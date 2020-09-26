@@ -2,10 +2,12 @@ import React, { useEffect, useState } from 'react';
 import LiveTranscript from '../main/LiveTranscript'
 import Stats from "../stats/Stats"
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition'
+import Visualizer from '../visualizer/Visualizer'
 
 const Navbar = () => {
     const [startTime, setStartTime] = useState();
     const [timeElapsed, setTimeElapsed] = useState(0);
+    const [playing, setPlaying] = useState(false);
     const { transcript, interimTranscript, resetTranscript } = useSpeechRecognition(/*{commands}*/);
 
 
@@ -15,11 +17,13 @@ const Navbar = () => {
 
     function stopRecording() {
         const stopTime = new Date();
+        setPlaying(false);
         SpeechRecognition.stopListening();
         console.log(startTime, stopTime);
         setTimeElapsed((stopTime - startTime) / 1000);
     }
     function startRecording() {
+        setPlaying(true);
         setStartTime(new Date());
         console.log("Start recording", startTime);
         SpeechRecognition.startListening({ continuous: true });
@@ -34,6 +38,7 @@ const Navbar = () => {
                 <div style={{height: '500px', float:'left', width:'58%'}}>
                     <Stats transcript={transcript} timeElapsed={timeElapsed} />
                 </div>
+                <Visualizer playing={playing}/>
             </div>
             <nav className="navbar fixed-bottom ">
                 <button className="button" id="stopButton" onClick={stopRecording} title="Stop Recording">

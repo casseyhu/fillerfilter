@@ -1,6 +1,9 @@
+import { propTypes } from "react-bootstrap/esm/Image";
 
 
-const Visualizer = () => {
+const Visualizer = (props) => {
+    console.log(props.playing);
+    if(props.playing){
     const myCanvas = document.getElementById("myCanvas");
     const ctx = myCanvas.getContext("2d");
 
@@ -52,7 +55,8 @@ const Visualizer = () => {
         }
         requestAnimationFrame(draw);
         });
-    });
+    }); 
+}
     return(null);
 }
 

@@ -51,6 +51,7 @@ const Navbar = () => {
     }
     function reset() {
         setTimeElapsed(0);
+        setWpm(0);
         resetTranscript();
     }
     

@@ -1,10 +1,9 @@
 /* transcript css */
 .live_transcript_box {
-  text-align: left;
+  text-align: center;
   margin-left: 3%;
   background-color:inherit;
   overflow: hidden;
-  color: #0D5498;
   font-family: 'Montserrat', sans-serif;
 }
 .live_transcript_header {
@@ -13,6 +12,8 @@
   background-color: white;
   text-align: center;
   border-radius: 12px;
+  padding: 8px;
+  display: inline-block;
 }
 .transcript {
     padding: 10px;

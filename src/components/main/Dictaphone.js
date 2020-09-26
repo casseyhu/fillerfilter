@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition'
+import Stats from "../stats/Stats"
 
 const Dictaphone = () => {
     var stopTime;
@@ -37,6 +38,7 @@ const Dictaphone = () => {
             <button onClick={resetTranscript}>Reset</button>
             <p>{transcript}</p>
             <p>{message}</p>
+            <Stats transcript ={transcript}/>
         </div>
     )
 }

@@ -1,32 +1,37 @@
+/* transcript css */
 .live_transcript_box {
-    text-align: center;
-    margin-left: 3%;
-    background-color:#A5BECF;
-    overflow: hidden;
+  text-align: center;
+  margin-left: 3%;
+  background-color:inherit;
+  overflow: hidden;
+  color: #0D5498;
+  font-family: 'Montserrat', sans-serif;
 }
-
 .live_transcript_header {
-    color: white;
-    font-size: 20px;
+  color: #0D5498;
+  font: 30pt bold 'Montserrat', sans-serif;
+  background-color: white;
+  border-radius: 12px;
 }
-
 .transcript {
     padding: 10px;
 }
 
+/* stats css */
 .barchart {
     margin-right: 2%;
 }
 
+
+/* navbar css */
 .navbar {
-  background-color: #FEFEFE;
+  background-color: inherit;
   border-radius: 20px 20px 0px 0px;
   min-height: 10%;
   padding: 0px;
 }
-
 .button {
-  background-color: #FEFEFE;
+  background-color: inherit;
   height: 60px;
   width: 25%;
   margin-left: auto;
@@ -36,28 +41,26 @@
   text-align: center;
   outline: none;
 }
-
 .button:focus{
 outline: none;
 box-shadow: none;
 }
-
 .button:hover{
 background-color: #DFE1E7;
 }
-
 .button:active{
 background-color: #A0A6A3;
 }
 
 
+/* GENERAL CSS */
 body {
-  /* background-color: #B7B7CB; */
   height: 100%;
   width: 100%;
   background:linear-gradient(#668BC4,transparent);
 }
 
+/* entry page and title css */
 .entry {
   display: flex;
   justify-content: center;
@@ -67,21 +70,17 @@ body {
   margin-left:auto;
   margin-right:auto;
 }
-
 .centert {
-    margin: auto;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 90px;
-    text-transform: uppercase;
-    text-align: center;
+  margin: auto;
+  font: 90px 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  text-align: center;
 }
-
 .glitch {
     position: relative;
     color: white;
     mix-blend-mode: lighten;
 }
-
 .glitch:before, .glitch:after {
     content: attr(data-text);
     position: absolute;
@@ -90,27 +89,22 @@ body {
     background: black;
     clip: rect(0, 0, 0, 0);
 }
-
 .glitch:before {
     left: -5px;
     text-shadow: 6px 0 rgba(231, 87, 87, 0.7);
 }
-
 .glitch:after {
     left: 5px;
     text-shadow: -6px 0 rgba(111, 111, 240, 0.7);
 }
-
 .glitch:hover:before {
     text-shadow: 4px 0rgba(231, 87, 87, 0.7);
     animation: glitch-loop-1 0.8s infinite ease-in-out reverse;
 }
-
 .glitch:hover:after {
     text-shadow: -5px 0 rgba(111, 111, 240, 0.7);
     animation: glitch-loop-2 0.8s infinite ease-in-out reverse;
 }
-
 @-webkit-keyframes glitch-loop-1 {
     0% {
         clip: rect(36px, 9999px, 9px, 0);
@@ -128,7 +122,6 @@ body {
         clip: rect(91px, 9999px, 98px, 0);
     }
 }
-
 @keyframes glitch-loop-1 {
     0% {
         clip: rect(36px, 9999px, 9px, 0);
@@ -146,7 +139,6 @@ body {
         clip: rect(91px, 9999px, 98px, 0);
     }
 }
-
 @-webkit-keyframes glitch-loop-2 {
     0% {
         top: -1px;
@@ -174,7 +166,6 @@ body {
         clip: rect(31px, 9999px, 149px, 0);
     }
 }
-
 @keyframes glitch-loop-2 {
     0% {
         top: -1px;
@@ -202,7 +193,6 @@ body {
         clip: rect(31px, 9999px, 149px, 0);
     }
 }
-
 #enterbutton {
   background-color: inherit;
   /* border: none; */
@@ -215,7 +205,6 @@ body {
   padding: 10px;
   margin-right: 60px;
 }
-
 #enterbutton:hover {
     background-color: white;
 }

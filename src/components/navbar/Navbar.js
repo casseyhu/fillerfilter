@@ -7,6 +7,7 @@ import Visualizer from '../visualizer/Visualizer'
 const Navbar = () => {
     const [startTime, setStartTime] = useState();
     const [timeElapsed, setTimeElapsed] = useState(0);
+    const [wpm, setWpm] = useState(0);
     const [playing, setPlaying] = useState(false);
     const { transcript, interimTranscript, resetTranscript } = useSpeechRecognition(/*{commands}*/);
 
@@ -22,8 +23,11 @@ const Navbar = () => {
             const stopTime = new Date();
             setPlaying(false);
             SpeechRecognition.stopListening();
-            console.log(startTime, stopTime);
-            setTimeElapsed((stopTime - startTime) / 1000);
+            if (transcript[0]!="" && timeElapsed + (stopTime - startTime) / 1000)
+                setWpm(Math.round(60*transcript.length/(timeElapsed + (stopTime - startTime) / 1000) * 10) / 10);
+            else
+                setWpm(0);
+            setTimeElapsed(timeElapsed + (stopTime - startTime) / 1000);
             stopButton.disabled = true;
             stopButton.style.backgroundColor = '#A1A4A5';
             let startButton = document.getElementById('startButton');
@@ -57,7 +61,7 @@ const Navbar = () => {
                     <LiveTranscript transcript={transcript} />
                 </div>
                 <div style={{height: '500px', float:'left', width:'58%'}}>
-                    <Stats transcript={transcript} timeElapsed={timeElapsed} />
+                    <Stats transcript={transcript} wpm={wpm} />
                 </div>
                 
             </div>

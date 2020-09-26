@@ -6,8 +6,8 @@
   overflow: hidden;
   font-family: 'Montserrat', sans-serif;
   border-radius: 10px;
-  -webkit-box-shadow: 0px 6px 15px -2px rgba(0,0,0,0.50); 
-  box-shadow: 0px 6px 15px -2px rgba(0,0,0,0.50);
+  -webkit-box-shadow: 0px 6px 15px -2px rgba(0,0,0,0.30); 
+  box-shadow: 0px 6px 15px -2px rgba(0,0,0,0.30);
 }
 .live_transcript_header {
   color: #0D5498;
@@ -48,7 +48,7 @@
   margin-right: 32%;
 }
 .button {
-  background-color: inherit;
+  background-color: #F7F3ED;
   height: 60px;
   width: 33%;
   margin-left: auto;
@@ -74,7 +74,7 @@ background-color: #c4c2c2;
 body {
   height: 100%;
   max-width: 100%;
-  background:linear-gradient(#668BC4,transparent);
+  background:linear-gradient(#7FC4F3,transparent);
 }
 
 /* entry page and title css */

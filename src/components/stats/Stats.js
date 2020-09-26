@@ -43,7 +43,6 @@ class Stats extends Component {
                     STATISTICS
                 </h5>
                 <div className="chart">
-                    <p>{console.log("transcript", transcript)}</p>
                     <p style={{marginBottom:'3px', font:'10pt Montserrat, sans-serif', textAlign:'center'}}>{this.props.wpm} words per minute</p>
                     <b>Top Filler Words Pie Chart</b>
                     <Chart chartType="PieChart" style={{backgroundColor:'clear'}} data={data} 

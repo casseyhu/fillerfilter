@@ -4,7 +4,7 @@ import logo from './logotext2.png'
 
 class Main extends Component {
     render () {
-        document.body.style = 'background-color: #B7B7CB; maxWidth:100%; height: 100vh; overflow: hidden;';
+        document.body.style = 'background-color: #B7B7CB; maxWidth:100%; height: 100vh; overflow: auto;';
         return (
             <div className="app">
                 <div className="row">

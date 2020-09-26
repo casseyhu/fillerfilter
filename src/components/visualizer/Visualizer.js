@@ -30,7 +30,6 @@ const Visualizer = (props) => {
         function draw() {
             // let radius = 75;
             let bars = 200;
-            console.log(occurred)
             // Draw Background. The color is specifically picked to blend with gradient. 
             ctx.clearRect(0,0,1920, 355);
             ctx.beginPath();

@@ -8,7 +8,19 @@ export const FillerWords = [
     "actually", 
     "seriously", 
     "literally" ,
-    "okay"
+    "okay",
+    "very",
+    "technically",
+    "absolutely",
+    "perhaps",
+    "maybe",
+    "simply",
+    "somehow",
+    "slightly",
+    "seemed",
+    "just",
+    "only"
+
 ]
 
 export const RegExFiller = [
@@ -21,7 +33,18 @@ export const RegExFiller = [
     /\bactually\b/, 
     /\bseriously\b/, 
     /\bliterally\b/,
-    /\bokay\b/
+    /\bokay\b/,
+    /\bvery\b/,
+    /\btechnically\b/,
+    /\babsolutely\b/,
+    /\bperhaps\b/,
+    /\bmaybe\b/,
+    /\bsimply\b/,
+    /\bsomehow\b/,
+    /\bslightly\b/,
+    /\bseemed\b/,
+    /\bjust\b/,
+    /\bonly\b/,
 ] 
 
 export default { FillerWords, RegExFiller }; 

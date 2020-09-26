@@ -45,7 +45,7 @@ class Stats extends Component {
                 <div className="chart">
                     {/* <p>Time Elapsed: {this.props.timeElapsed} seconds</p> */}
                     <p style={{marginBottom:'3px', font:'10pt Montserrat, sans-serif', textAlign:'center'}}>{this.props.timeElapsed ? (Math.round(60*transcript.length/this.props.timeElapsed * 10) / 10) : 0} words per minute</p>
-                    <b>Top 10 Common Words in Transcript</b>
+                    <b>Top Filler Words Pie Chart</b>
                     <Chart chartType="PieChart" style={{backgroundColor:'clear'}} data={data} 
                     options={{
                         // title: "Most Common Filler Words",

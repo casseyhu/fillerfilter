@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 const Visualizer = (props) => {
 
     const [occurred, setOccurred] = useState(false);
-    if(props.playing && !occurred){
+    if(!occurred){
         setOccurred(true);
     const myCanvas = document.getElementById("myCanvas");
     const ctx = myCanvas.getContext("2d");

@@ -23,6 +23,14 @@
     margin-right: 2%;
 }
 
+/* canvas css */
+#myCanvas {
+  background-color: clear;
+  position: fixed;
+  width: 100%;
+  bottom: 0px;
+  background:transparent;
+}
 
 /* navbar css */
 .navbar {

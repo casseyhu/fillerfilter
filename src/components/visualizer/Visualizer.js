@@ -27,8 +27,9 @@ const Visualizer = () => {
             let bars = 400;
 
             // Draw Background. The color is specifically picked to blend with gradient. 
-            ctx.fillStyle = "#d3dced";
-            ctx.fillRect(0,50, 1920, 300);
+            // ctx.fillStyle = "#d3dced";
+            // ctx.fillRect(0,50, 1920, 300);
+            ctx.clearRect(0,52,1920, 300);
             ctx.beginPath();
             analyser.getByteFrequencyData(freqs);
             for (var i = 0; i < bars; i++) {

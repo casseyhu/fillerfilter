@@ -1,7 +1,6 @@
 .live_transcript_box {
-    width: 70%;
     text-align: center;
-    margin: auto;
+    margin-left: 3%;
     background-color:  #E79A92;
     overflow: hidden;
 }
@@ -16,21 +15,22 @@
 }
 
 .barchart {
-    width: 70%;
-    margin: auto;
+    margin-right: 3%;
 }
 
 .navbar {
     background-color: #E0E4D6;
     border-radius: 20px 20px 0px 0px;
-    min-height: 100px;
+    min-height: 10%;
     padding: 0px;
 }
 
-#startButton, #stopButton, #newButton, #resetButton, #muteButton {
+.button {
     background-color: #E0E4D6;
     height: 60px;
-    width: 60px;
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
     border-radius: 30px;
     border-color: #FFFFFF;
     border: none;

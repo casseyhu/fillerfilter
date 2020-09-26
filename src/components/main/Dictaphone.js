@@ -1,9 +1,8 @@
-import React,  {useEffect, useState}  from 'react';
-
-// import * as ReactBootStrap from 'react-bootstrap';
+import React, {useEffect, useState} from 'react'
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition'
+import Stats from "../stats/Stats"
 
-function Navbar(){
+const Dictaphone = () => {
     var stopTime;
     var startTime;
     const [message, setMessage] = useState('');
@@ -19,6 +18,7 @@ function Navbar(){
     if (!SpeechRecognition.browserSupportsSpeechRecognition()) {
         return null
     }
+
     function stopRecording() {
         SpeechRecognition.stopListening();
         stopTime = new Date();
@@ -29,17 +29,17 @@ function Navbar(){
         console.log("Start recording");
         SpeechRecognition.startListening({continuous: true});
     }
+
     return (
-        <div>        
-             <nav className="navbar fixed-bottom ">
-                 {/* <a class="navbar-brand"></a> */}
-                 <button id="stopButton" onClick={stopRecording}>Stop</button>
-                 <button id="startButton" onClick={startRecording}>Start</button>
-                 <button id="newButton" onClick={function myfunc() {console.log(transcript)}}>NEW</button>
-                 <button id="resetButton" onClick={resetTranscript}>Reset</button>
-             </nav>
+        <div>
+            <button onClick={startRecording}>Start</button>
+            <button onClick={stopRecording}>Stop</button>
+            <button onClick={function myfunc() {console.log(transcript)}}>NEW</button>
+            <button onClick={resetTranscript}>Reset</button>
+            <p>{transcript}</p>
+            <p>{message}</p>
+            <Stats transcript ={transcript}/>
         </div>
     )
 }
-
-export default Navbar
+export default Dictaphone

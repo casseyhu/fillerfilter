@@ -5,7 +5,7 @@ class Stats extends Component {
         var filler_dictionary = {"like": 0, "basically": 0, "so": 0, "wow": 0, "really": 0, "well": 0, "actually": 0, "seriously": 0,
             "literally": 0, "okay": 0,
         };
-        const transcript = this.props.message.toLowerCase().split(" ");
+        const transcript = this.props.transcript.toLowerCase().split(" ");
         for(var i = 0; i < transcript.length; i++){
             console.log(filler_dictionary[transcript[i]])
             if(filler_dictionary[transcript[i]] != null){

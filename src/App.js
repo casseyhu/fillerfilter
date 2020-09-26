@@ -8,9 +8,9 @@ export class App extends Component {
     render() {
         return (
             <div className="app">
+                <Navbar /> 
                 <SpeechToText/>
                 <Stats />
-                <Navbar /> 
             </div>
         );
     }

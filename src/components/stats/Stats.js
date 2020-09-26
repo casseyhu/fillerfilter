@@ -6,7 +6,7 @@ class Stats extends Component {
     render() {
         var filler_dictionary = {};
         var transcript_dictionary = {}
-        for (const key of FillerWords) {
+        for (const key of FillerWords.FillerWords) {
              filler_dictionary[key] = 0;
         }
         const transcript = this.props.transcript.toLowerCase().split(" ");

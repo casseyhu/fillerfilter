@@ -11,8 +11,7 @@ export class LiveTranscript extends Component {
                 </h5>
                 <div className="transcript">
                 <Highlighter
-                    searchWords={FillerWords}
-                    autoEscape={true}
+                    searchWords={FillerWords.RegExFiller}
                     textToHighlight={this.props.transcript}
                     highlightStyle={{backgroundColor: "white"}}
                 />

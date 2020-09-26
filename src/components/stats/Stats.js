@@ -42,7 +42,7 @@ class Stats extends Component {
                 <div className="chart">
                     <p>Time Elapsed: {this.props.timeElapsed} seconds</p>
                     <b>Top 10 Common Words in Transcript</b>
-                    <Chart chartType= "Table" style={{paddingRight: '2%', paddingBottom: '2%'}} data={top_words}
+                    <Chart chartType= "Table" style={{paddingRight: '2%', paddingBottom: '2%', borderRadius: '10px'}} data={top_words}
                     options={{
                         height: '50%',
                         width: '100%',

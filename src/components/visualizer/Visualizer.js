@@ -20,7 +20,6 @@ const Visualizer = () => {
         const source = context.createMediaStreamSource(stream);
         source.connect(analyser);
         analyser.connect(context.destination);
-
         freqs = new Uint8Array(analyser.frequencyBinCount);
 
         function draw() {
@@ -28,8 +27,8 @@ const Visualizer = () => {
             let bars = 400;
 
             // Draw Background. The color is specifically picked to blend with gradient. 
-            ctx.fillStyle = "#dfe6f2";
-            ctx.fillRect(0,100, 1920, 300);
+            ctx.fillStyle = "#d3dced";
+            ctx.fillRect(0,50, 1920, 300);
             ctx.beginPath();
             analyser.getByteFrequencyData(freqs);
             for (var i = 0; i < bars; i++) {
@@ -45,7 +44,7 @@ const Visualizer = () => {
                 ctx.lineWidth = 3;
                 ctx.beginPath();
                 ctx.moveTo(x, y);
-                ctx.lineTo(x, y - bar_height * 1.50);
+                ctx.lineTo(x, y - bar_height * 1.80);
                 ctx.stroke();
             }
             requestAnimationFrame(draw);

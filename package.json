@@ -13,7 +13,7 @@
     "react-scripts": "^3.4.3",
     "react-speech-recognition": "^3.2.3",
     "react-transition-group": "^4.4.1",
-    "react-google-charts": "^3.0.15",
+    "react-google-charts": "^3.0.15"
   },
   "scripts": {
     "start": "react-scripts start",

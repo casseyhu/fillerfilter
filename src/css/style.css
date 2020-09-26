@@ -1,3 +1,19 @@
+.navbar {
+  background-color: #B7B7CB;
+  border-radius: 20px 20px 0px 0px;
+  min-height: 100px;
+  padding: 0px;
+} 
+#startButton, #stopButton, #newButton, #resetButton, #muteButton{
+  background-color: #E0E4D6;
+  height: 60px;
+  width: 60px;
+  border-radius: 30px;
+  border-color: #FFFFFF;
+  border: none;
+  text-align: center;
+  outline: none;
+} 
 
 body {
   background-color: #B7B7CB;
@@ -136,10 +152,10 @@ body {
     left: -1px;
     clip: rect(31px, 9999px, 149px, 0);
   }
-}
+} 
 
 
-/* #enterbutton {
+#enterbutton {
   background-color: white;
   border: none;
   border-radius: 15px;
@@ -149,13 +165,11 @@ body {
   text-align: center;
   cursor: pointer;
   padding: 10px ;
-} */
+}
 
 #enterbutton{
-  /* display: flex ; */
   padding:0.3em 1.2em;
   border-radius:2em;
-  /* text-decoration:none; */
   font: 15pt 'Montserrat', sans-serif;
   color:white;
   background-color:#E0E4D6;
@@ -167,20 +181,4 @@ body {
 }
 #enterbutton:hover{
   background-color:#E0E4D6;
-
-.navbar {
-  background-color: #B7B7CB;
-  border-radius: 20px 20px 0px 0px;
-  min-height: 100px;
-  padding: 0px;
-}
-#startButton, #stopButton, #newButton, #resetButton, #muteButton{
-  background-color: #E0E4D6;
-  height: 60px;
-  width: 60px;
-  border-radius: 30px;
-  border-color: #FFFFFF;
-  border: none;
-  text-align: center;
-  outline: none;
 }

@@ -1,4 +1,18 @@
 body {
-  background-color: var(--swatch-foundation);
-  font-family: 'Lexend Exa';
+    background-color: var(--swatch-foundation);
+    font-family: 'Lexend Exa';
+}
+
+.live_transcript_box {
+    width: 300px;
+    border: 10px solid;
+    margin: 20px;
+}
+
+.live_transcript_header {
+    text-align: center;
+}
+
+.transcript {
+    padding: 50px;
 }

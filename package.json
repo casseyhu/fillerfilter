@@ -3,9 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "materialize-css": "^1.0.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "react-scripts": "3.1.2",
+    "react-materialize": "^3.9.3",
+    "react-scripts": "^3.4.3",
     "react-speech-recognition": "^3.2.3"
   },
   "scripts": {

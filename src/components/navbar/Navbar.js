@@ -16,17 +16,34 @@ const Navbar = () => {
     }
 
     function stopRecording() {
-        const stopTime = new Date();
-        setPlaying(false);
-        SpeechRecognition.stopListening();
-        console.log(startTime, stopTime);
-        setTimeElapsed((stopTime - startTime) / 1000);
+        let stopButton = document.getElementById('stopButton');
+        if(!stopButton.disabled) {
+            console.log('testing')
+            const stopTime = new Date();
+            setPlaying(false);
+            SpeechRecognition.stopListening();
+            console.log(startTime, stopTime);
+            setTimeElapsed((stopTime - startTime) / 1000);
+            stopButton.disabled = true;
+            stopButton.style.backgroundColor = '#A1A4A5';
+            let startButton = document.getElementById('startButton');
+            startButton.disabled = false;
+            startButton.style.backgroundColor = '#F7F3ED';
+        }
     }
     function startRecording() {
-        setPlaying(true);
-        setStartTime(new Date());
-        console.log("Start recording", startTime);
-        SpeechRecognition.startListening({ continuous: true });
+        let startButton = document.getElementById('startButton');
+        if(!startButton.disabled) {
+            setPlaying(true);
+            setStartTime(new Date());
+            console.log("Start recording", startTime);
+            SpeechRecognition.startListening({ continuous: true });
+            startButton.disabled = true;
+            startButton.style.backgroundColor = '#A1A4A5';
+            let stopButton = document.getElementById('stopButton');
+            stopButton.disabled = false;
+            stopButton.style.backgroundColor = '#F7F3ED';
+        }
     }
     function reset() {
         setTimeElapsed(0);
@@ -46,7 +63,7 @@ const Navbar = () => {
             </div>
             <Visualizer playing={playing}/>
             <nav className="navbar fixed-bottom ">
-                <button className="button" id="stopButton" onClick={stopRecording} title="Stop Recording">
+                <button className="button" id="stopButton" onClick={stopRecording} title="Stop Recording" style={{backgroundColor:'#A1A4A5'}}>
                     <img src="https://www.flaticon.com/svg/static/icons/svg/709/709714.svg" width="40px" height="40px"/>
                 </button>
                 <button className="button" id="startButton" onClick={startRecording} title="Start Recording">

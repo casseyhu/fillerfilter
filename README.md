@@ -22,16 +22,19 @@ $ npm start
 To use this application, users must allow microphone permission to record audio.
 
 ## What it does
-When the user first opens the website, they are welcomed with an animated title screen.
-![Entry Page](https://media.giphy.com/media/u3CaQPzDQ9wUdtfrXR/giphy.gif)
+When the user first opens the website, they are welcomed with an animated title screen. 
 On the main webpage, users have the options to start, stop, and reset the current recording at the bottom navigation bar. 
-#### Features (Real-Time Updates)
+
+<p align="center">
+<img src="https://media.giphy.com/media/u3CaQPzDQ9wUdtfrXR/giphy.gif" width="450">  <img src="https://media.giphy.com/media/tNTJtJkcxglfowYoVS/giphy.gif" width="450">
+</p>
+
+### Features (Real-Time Updates)
 * **Live transcript**: As the user speaks into the mic, live transcript is generated from using a Web Speech API. 
 * **Words per minute (wpm)**: Running average of words spoken per minute during the recording time frame.
 * **Top 10 common filler words**: Pie chart depicting usage of the 21 common filler words located in FillerWords.js.
 * **Top 10 common words used**: Table depicting the frequency count for the top 10 most common words used during the speech.
 * **Speech visualizer**: Generates an animated imagery that follows the frequency spectrum of the users voice.
-![Sample Session](https://media.giphy.com/media/tNTJtJkcxglfowYoVS/giphy.gif)
 
 ## How we built it
 Our application is mainly built upon **react-speech-recognition** -- a react hook that converts speech from the users microphone to text. 

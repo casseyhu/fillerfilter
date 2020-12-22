@@ -36,7 +36,7 @@ class Stats extends Component {
                 data.push([key, filler_dictionary[key]])
         }
         top_words.unshift(['Word', 'Frequency']);
-        data.unshift(['Filler Words', "Frequency"]); //separated filler words out of all words
+        data.unshift(['Filler Words', "Frequency"]);
         return (
             <div style={{textAlign:"center"}}>
                 <h5 className="live_transcript_header">
